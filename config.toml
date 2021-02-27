@@ -27,8 +27,8 @@ unsafe= true
 
     [params.meta]
         # To provide some metadata for search engines (OPTIONAL)
-        author = "<AUTHOR>"
-        description = "<DESCRIPTION>"
+        author = "Joel Guerra"
+        description = "Delia's Cleaning"
 
         # The path must be relative to the static folder (MANDATORY)
         favicon = "favicon-32x32.png"
