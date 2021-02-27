@@ -15,10 +15,10 @@
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 [[headers]]
-  for = /*.woff*
+  for = "/*.woff*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
 [[headers]]
-  for = /*.ttf
+  for = "/*.ttf"
   [headers.values]
     Access-Control-Allow-Origin = "*"
