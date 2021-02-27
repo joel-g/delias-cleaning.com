@@ -1,0 +1,22 @@
+---
+title: "SERVICES"
+background_image: "services.jpg"
+
+# List of services.
+# Optional "text", "icon_pack" & "list"
+services:
+- name: "Residential"
+  icon: "fa-home"
+  icon_pack: "fas"
+  list: [ "Bathroom Cleaning", "Kitchen Cleaning", "Whole Home", "Floors", "Laundry", "Bed Changing" ]
+- name: "Commercial"
+  icon: "fa-building"
+  icon_pack: "fas"
+  text: "We can help your business"
+  list: ["Offices", "Restaurants", "Carpet Cleaning", "Plante Care", "Windows"]
+- name: "Frequency"
+  icon: "fa-calendar"
+  icon_pack: "fas"
+  text: "Make us part of your routine"
+  list: [ "Weekly", "Bi-weekly", "Monthly", "One-time", "Same day"]
+---
