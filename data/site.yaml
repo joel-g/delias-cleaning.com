@@ -1,0 +1,37 @@
+name: "Delia's Cleaning"
+region: "South Puget Sound"
+phone: "253-632-1462"
+phone_uri: "+12536321462"
+facebook: "https://www.facebook.com/Delias-Cleaning-352183895506930/"
+hero:
+  eyebrow: "A little help. A fresh start."
+  title: "A clean home."
+  title_second: "More time for you."
+  text: "You work hard. Come home to a space you can enjoy. Personal, professional cleaning for homes and businesses in South Puget Sound."
+  image: "images/home.jpg"
+  image_alt: "A tidy, sunlit living room with soft sofas and wood floors"
+trust:
+  - "Licensed, bonded & insured"
+  - "Free quotes"
+  - "Se habla español"
+services:
+  eyebrow: "A clean that fits your life"
+  title: "Your space, taken care of."
+  text: "From the rooms you live in to the places you work, let us help with the details."
+schedule:
+  title: "A fresh start, on your schedule."
+  text: "Keep things feeling good with regular visits, or ask for a one-time clean. Contact us for same-day availability."
+  options: ["Weekly", "Every two weeks", "Monthly", "One-time"]
+about:
+  eyebrow: "Meet Delia"
+  title: "A personal touch. A home to feel good in."
+  image: "images/portrait.jpeg"
+  paragraphs:
+    - "Hi, I'm Delia. I'm a professional cleaner serving customers across South Puget Sound. My team and I help take cleaning off your list, so you have more time for the things that matter to you."
+    - "I take pride in my work and stand behind it with integrity. Tell me about your space, your routine, and what you need help with. We'll talk through how we can help."
+  note: "References available upon request. Se habla español."
+contact:
+  eyebrow: "Let's make room for you"
+  title: "Your next clean starts with a hello."
+  text: "Call or text Delia for a free quote. Share your location, the size of your space, and the kind of cleaning you're looking for."
+  region_text: "Cleaning homes and businesses throughout South Puget Sound. Get in touch to check service in your neighborhood."

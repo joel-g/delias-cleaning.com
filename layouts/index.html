@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>{{ partial "head.html" . }}</head>
+<body>
+{{ partial "header.html" . }}
+{{ $s := .Site.Data.site }}
+<main id="main">
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ $s.hero.eyebrow }}</p>
+      <h1 id="hero-title">{{ $s.hero.title }}<br><span>{{ $s.hero.title_second }}</span></h1>
+      <p class="hero-description">{{ $s.hero.text }}</p>
+      <div class="actions">
+        <a class="button" href="sms:{{ $s.phone_uri }}">Text for a free quote {{ partial "icon.html" "arrow" }}</a>
+        <a class="text-link" href="tel:{{ $s.phone_uri }}">{{ partial "icon.html" "phone" }} {{ $s.phone }}</a>
+      </div>
+      <p class="hero-location">{{ partial "icon.html" "location" }} Locally serving {{ $s.region }}</p>
+    </div>
+    <div class="hero-visual">
+      <img class="hero-photo" src="{{ $s.hero.image | relURL }}" alt="{{ $s.hero.image_alt }}" width="1500" height="1000" fetchpriority="high">
+      <div class="photo-note">{{ partial "icon.html" "sparkle" }} <span>Less to do.<br><strong>More room to breathe.</strong></span></div>
+      <span class="photo-caption">A fresh space. A fresh feeling.</span>
+    </div>
+  </section>
+  <div class="trust-strip">
+    <ul class="container trust-list" aria-label="Why choose Delia's Cleaning">
+      {{ range $s.trust }}<li>{{ partial "icon.html" "check" }} {{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-intro">
+        <div><p class="eyebrow">{{ $s.services.eyebrow }}</p><h2 id="services-title">{{ $s.services.title }}</h2></div>
+        <p>{{ $s.services.text }}</p>
+      </div>
+      <div class="service-grid">
+        {{ range first 2 .Site.Data.services.services }}
+        <article class="service-card">
+          <div class="service-card-heading"><span class="service-icon">{{ if eq .name "Residential" }}{{ partial "icon.html" "home" }}{{ else }}{{ partial "icon.html" "building" }}{{ end }}</span><span class="service-label">{{ if eq .name "Residential" }}For your home{{ else }}For your business{{ end }}</span></div>
+          <h3>{{ .name }} cleaning</h3>
+          <p>{{ .description }}</p>
+          <ul class="service-list">{{ range .list }}<li>{{ partial "icon.html" "check" }} {{ . }}</li>{{ end }}</ul>
+          <a class="text-link" href="sms:{{ $s.phone_uri }}">Let's talk about your space {{ partial "icon.html" "arrow" }}</a>
+        </article>
+        {{ end }}
+      </div>
+      <div class="schedule">
+        <div><h3>{{ $s.schedule.title }}</h3><p>{{ $s.schedule.text }}</p></div>
+        <ul aria-label="Cleaning schedules">{{ range $s.schedule.options }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+    </div>
+  </section>
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="portrait-wrap">
+        <img src="{{ $s.about.image | relURL }}" alt="Delia, owner of Delia's Cleaning" width="449" height="600" loading="lazy">
+        <div class="portrait-caption"><strong>Delia</strong><span>Your local cleaning professional</span></div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">{{ $s.about.eyebrow }}</p>
+        <h2 id="about-title">{{ $s.about.title }}</h2>
+        {{ range $s.about.paragraphs }}<p>{{ . }}</p>{{ end }}
+        <p class="about-note">{{ partial "icon.html" "sparkle" }} {{ $s.about.note }}</p>
+        <a class="text-link" href="sms:{{ $s.phone_uri }}">Say hello to Delia {{ partial "icon.html" "arrow" }}</a>
+      </div>
+    </div>
+  </section>
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div><p class="eyebrow">{{ $s.contact.eyebrow }}</p><h2 id="contact-title">{{ $s.contact.title }}</h2><p class="contact-description">{{ $s.contact.text }}</p>
+        <div class="actions"><a class="button button-light" href="sms:{{ $s.phone_uri }}">{{ partial "icon.html" "message" }} Text Delia</a><a class="button button-outline" href="tel:{{ $s.phone_uri }}">{{ partial "icon.html" "phone" }} Call {{ $s.phone }}</a></div>
+      </div>
+      <aside class="service-area" aria-label="Service area">
+        {{ partial "icon.html" "location" }}
+        <h3>Local care.<br>Right here.</h3>
+        <p>{{ $s.contact.region_text }}</p>
+        <span>Se habla español</span>
+      </aside>
+    </div>
+  </section>
+</main>
+{{ partial "footer.html" . }}
+</body>
+</html>

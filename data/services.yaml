@@ -6,14 +6,16 @@ background_image: "services.jpg"
 # Optional "text", "icon_pack" & "list"
 services:
 - name: "Residential"
+  description: "A little less on your to-do list. A little more comfort at home."
   icon: "fa-home"
   icon_pack: "fas"
   list: [ "Bathroom Cleaning", "Kitchen Cleaning", "Whole Home", "Floors", "Laundry", "Bed Changing" ]
 - name: "Commercial"
+  description: "A clean, welcoming space for your team and your customers."
   icon: "fa-building"
   icon_pack: "fas"
   text: "We can help your business"
-  list: ["Offices", "Restaurants", "Carpet Cleaning", "Plante Care", "Windows"]
+  list: ["Offices", "Restaurants", "Carpet Cleaning", "Plant Care", "Windows"]
 - name: "Frequency"
   icon: "fa-calendar"
   icon_pack: "fas"

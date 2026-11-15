@@ -1,0 +1,16 @@
+{{ $s := .Site.Data.site }}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ $s.name }} home">
+      <span class="brand-mark">{{ partial "icon.html" "sparkle" }}</span>
+      <span>Delia's<span class="brand-subtitle">CLEANING</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="{{ "/#services" | relURL }}">Services</a>
+      <a href="{{ "/#about" | relURL }}">Meet Delia</a>
+      <a href="{{ "/#contact" | relURL }}">Contact</a>
+    </nav>
+    <a class="button button-small header-quote" href="sms:{{ $s.phone_uri }}">Get a free quote {{ partial "icon.html" "arrow" }}</a>
+  </div>
+</header>

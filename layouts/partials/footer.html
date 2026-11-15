@@ -1,0 +1,12 @@
+{{ $s := .Site.Data.site }}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="footer-brand" href="{{ "/" | relURL }}">{{ $s.name }}</a>
+    <p>Serving {{ $s.region }} <span aria-hidden="true">&middot;</span> Se habla español</p>
+    <a href="{{ $s.facebook }}">Find us on Facebook {{ partial "icon.html" "arrow" }}</a>
+  </div>
+  <div class="container footer-bottom">
+    <small>&copy; {{ now.Year }} {{ $s.name }}</small>
+    <a href="tel:{{ $s.phone_uri }}">{{ $s.phone }}</a>
+  </div>
+</footer>
